@@ -5,11 +5,12 @@ import { useTerminalStore } from '../stores/terminalStore';
 import TerminalOutput from '../components/Terminal/TerminalOutput';
 import CommandInput from '../components/Terminal/CommandInput';
 import BootSequence from '../components/Terminal/BootSequence';
+import ChatWindow from '../components/Terminal/ChatWindow';
 
 const Index = () => {
   const [isBooting, setIsBooting] = useState(true);
   const terminalRef = useRef<HTMLDivElement>(null);
-  const { output } = useTerminalStore();
+  const { output, isChatOpen } = useTerminalStore();
 
   useEffect(() => {
     const bootTimer = setTimeout(() => {
@@ -66,6 +67,11 @@ const Index = () => {
           <CommandInput />
         </div>
       </div>
+
+      {/* Chat Window */}
+      <AnimatePresence>
+        {isChatOpen && <ChatWindow />}
+      </AnimatePresence>
     </div>
   );
 };

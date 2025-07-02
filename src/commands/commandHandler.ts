@@ -8,6 +8,7 @@ const commands = {
   projects  - View our projects  
   team      - Meet our team
   contact   - Get in touch
+  chat      - Open chat interface
   clear     - Clear terminal
   help      - Show this help`,
 
@@ -63,6 +64,11 @@ and streamline digital workflows for businesses and individuals alike.`,
 
 For partnerships and collaboration opportunities,
 reach out to partnerships@quasivo.ai`,
+
+  chat: () => {
+    useTerminalStore.getState().openChat();
+    return 'Opening chat interface...';
+  },
 
   clear: () => {
     useTerminalStore.getState().clearOutput();

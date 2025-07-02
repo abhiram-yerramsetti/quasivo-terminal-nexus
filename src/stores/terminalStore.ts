@@ -12,16 +12,20 @@ interface TerminalStore {
   output: TerminalOutput[];
   commandHistory: string[];
   historyIndex: number;
+  isChatOpen: boolean;
   addOutput: (command: string, response: string) => void;
   clearOutput: () => void;
   addToHistory: (command: string) => void;
   setHistoryIndex: (index: number) => void;
+  openChat: () => void;
+  closeChat: () => void;
 }
 
 export const useTerminalStore = create<TerminalStore>((set, get) => ({
   output: [],
   commandHistory: [],
   historyIndex: -1,
+  isChatOpen: false,
 
   addOutput: (command: string, response: string) => {
     const newEntry: TerminalOutput = {
@@ -50,5 +54,13 @@ export const useTerminalStore = create<TerminalStore>((set, get) => ({
 
   setHistoryIndex: (index: number) => {
     set({ historyIndex: index });
+  },
+
+  openChat: () => {
+    set({ isChatOpen: true });
+  },
+
+  closeChat: () => {
+    set({ isChatOpen: false });
   },
 }));
