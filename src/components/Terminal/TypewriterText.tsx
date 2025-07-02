@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -8,7 +7,7 @@ interface TypewriterTextProps {
   speed?: number;
 }
 
-const TypewriterText = ({ text, delay = 0, speed = 20 }: TypewriterTextProps) => {
+const TypewriterText = ({ text, delay = 0, speed = 4 }: TypewriterTextProps) => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
 
