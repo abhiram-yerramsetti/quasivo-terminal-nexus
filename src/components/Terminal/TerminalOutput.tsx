@@ -26,8 +26,8 @@ const TerminalOutput = () => {
           <div className="pl-4 border-l border-terminal-green/20">
             <TypewriterText 
               text={entry.response} 
-              delay={200}
-              speed={30}
+              delay={100}
+              speed={20}
             />
           </div>
         </motion.div>

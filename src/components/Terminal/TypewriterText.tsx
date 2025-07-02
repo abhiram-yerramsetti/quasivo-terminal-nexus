@@ -8,7 +8,7 @@ interface TypewriterTextProps {
   speed?: number;
 }
 
-const TypewriterText = ({ text, delay = 0, speed = 50 }: TypewriterTextProps) => {
+const TypewriterText = ({ text, delay = 0, speed = 20 }: TypewriterTextProps) => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
 
