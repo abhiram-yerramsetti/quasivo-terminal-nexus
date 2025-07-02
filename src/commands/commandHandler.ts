@@ -43,7 +43,7 @@ and streamline digital workflows for businesses and individuals alike.`,
 
   team: () => `Our Team:
 
-▸ Dr. Sarah Chen - Founder & CEO
+▸ Dr. Sarah Chen - CEO
   AI Research, Systems Architecture
   
 ▸ Marcus Rodriguez - CTO  
